@@ -1,0 +1,116 @@
+/* General Reset for Cross-Browser Consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Blog Container */
+.blog-container {
+    background-color: #fff;
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Blog Title */
+h1 {
+    font-size: 2.8rem;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* Blog Content */
+p.blog-content {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    color: #555;
+    margin: 20px 0;
+    letter-spacing: 0.5px;
+}
+
+/* Author and Date */
+p.blog-meta {
+    font-size: 1rem;
+    color: #888;
+    text-align: right;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* Back to Blog List Button */
+a.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for button */
+a.back-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .blog-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p.blog-content {
+        font-size: 1rem;
+    }
+
+    a.back-button {
+        padding: 10px 20px;
+    }
+}
+.list {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #a259ab;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-top: 50px;
+    transition: background-color 0.3s ease;
+}
+.list:hover{
+    background-color: #3c0034;
+}

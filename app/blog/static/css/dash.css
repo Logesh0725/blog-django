@@ -1,0 +1,222 @@
+/* General Reset for Cross-Browser Consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Advanced Grid Layout for the whole page */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+/* Top Navigation Bar Styling */
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Section 1: Header Title */
+.home-head-section1 .head-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    color: #f0f0f0;
+}
+
+/* Section 2: Search Bar */
+.home-head-section2 {
+    display: flex;
+    align-items: center;
+}
+
+.home-search {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    width: 200px;
+    transition: width 0.4s ease;
+}
+
+/* Hover Effect on Search */
+.home-search:focus {
+    width: 300px;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.home-search-button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: #610383;
+    border: none;
+    border-radius: 30%;
+    cursor: pointer;
+    color: white;
+}
+
+.home-search-button i {
+    font-size: 1.2rem;
+}
+
+/* Section 3: Navigation Links */
+.home-head-section3 .home-links {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #555;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.home-head-section3 .home-links:hover {
+    background-color: #ff6b6b;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .topnav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-head-section2 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .home-search {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .home-head-section3 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+
+/* Main Content Area */
+.main-content {
+    padding: 40px;
+    background-image: url(https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    overflow-y: auto;
+}
+
+.main-content div {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Advanced Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+h4, h5, h6 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Buttons Styling */
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4757;
+}
+
+/* Adding Transitions for Smoothness */
+a, input, button {
+    transition: all 0.3s ease-in-out;
+}
+h1 {
+    font-size: 2.5rem;
+    color: #222;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Blog List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Blog List Item */
+li {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Blog Links */
+li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Hover effects */
+li:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-5px);
+}
+
+li a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    li {
+        padding: 15px;
+    }
+
+    li a {
+        font-size: 1.1rem;
+    }
+}
+

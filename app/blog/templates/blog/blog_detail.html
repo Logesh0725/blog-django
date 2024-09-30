@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ blog.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
+
+</head>
+<body>
+    <h1>{{ blog.title }}</h1>
+    <p>{{ blog.content }}</p>
+    <p><em>By {{ blog.author.username }} on {{ blog.created_at }}</em></p>
+    <a class="list" href="{% url 'blog_list' %}">Back to Blog List</a>
+
+</body>
+</html> 
+
+
+

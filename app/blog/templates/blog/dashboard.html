@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/dash.css' %}">
+    {% block extra_styles %}{% endblock %}
+    <title>Blog Management</title>
+</head>
+
+<body>
+
+    <div class="layout">
+        <div class="topnav">
+            <div class="home-head-section1">
+                <h4 class="head-title">Blogs</h4>
+            </div>
+            <div class="home-head-section2">
+                <input class="home-search" type="search" placeholder="search Blogs.."/>
+                <button type="submit" class="home-search-button">Search<i class="fas fa-search"></i></button>
+            </div>
+
+
+           
+
+            <div class="home-head-section3">
+                <a class="home-links" href="{% url 'create_blog' %}">Create</a>
+                <a class="home-links" href="{% url 'blog_list' %}">Blogs</a>
+                <a class="home-links" href="{% url 'logout' %}">Logout</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <div class ="back">{% block content %}
+                
+                
+                <h1>Available Blogs</h1>
+                <ul>
+                    {% for blog in blogs %}
+                        <li><a href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endblock %}</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
